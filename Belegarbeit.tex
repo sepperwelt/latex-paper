@@ -1,0 +1,198 @@
+\documentclass[a4paper,fleqn,12pt]{article}
+\setlength{\headheight}{23pt}
+\usepackage[a4paper, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{grffile}
+\usepackage{eurosym}
+\usepackage{graphicx} % Allows including images 
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[separate-uncertainty]{siunitx}
+\usepackage{ifthen}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[justification=centering,labelfont=bf]{caption}
+\usepackage[bottom]{footmisc}
+\usepackage{todonotes}
+\presetkeys{todonotes}{inline}{}
+\usepackage{tikz}
+\usepackage{gnuplot-lua-tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+\usepackage{lastpage}
+\usepackage{xspace}	
+\usepackage[skip=10pt plus1pt, indent=10pt]{parskip}
+\usepackage{makecell}
+\usepackage{csvsimple}
+\usepackage{siunitx}
+\usepackage{svg}
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{enumitem}
+\setitemize{itemsep=-5pt}
+\setenumerate{itemsep=-5pt}
+\setlength{\mathindent}{10pt}
+\renewcommand{\baselinestretch}{1.5} 
+
+\newcommand\tab[1][0.5cm]{\hspace*{#1}}
+
+\usepackage[					   % Literaturverzeichnis mit "biber [Projektname ohne Endung]" aktualisieren
+    backend=biber,
+    style=ieee,
+]{biblatex}                        % Bibliography management
+\addbibresource{references.bib}    % Bibliography file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% PACKAGAES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  Mathematik
+\usepackage{amsmath}								%  Mathematikpaket
+\allowdisplaybreaks									%  Formeln können auf mehrere Seiten verteilt werden
+\usepackage{amssymb}								%  spezielle Mathmematiksymbole
+\usepackage{siunitx}								%  korrektes Darstellen von Einheiten
+\sisetup{locale = DE}
+
+\usepackage{geometry}								%  Definition der Seitenraender
+\usepackage[final]{pdfpages}							% zum einbinden von externen pdf-Seiten
+\usepackage{graphicx}								%  zum Einbinden von Grafiken, spziell für dvi->ps Konvertierung
+\setlength{\unitlength}{1mm}
+\usepackage[hidelinks]{hyperref}	
+\usepackage{placeins}								% FloatBarrier
+\usepackage{upgreek}
+\usepackage{tabularx}								% schöne tabellen
+\usepackage{longtable}  								% lange tabellen
+%\usepackage[osf,sc]{mathpazo}						% Schriftart	
+\usepackage{booktabs}								% linien in der tabelle
+\usepackage{nicefrac}								% brüche in zeilen
+
+\usepackage{array}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+
+% ---------------Mathematisches----------------------------->
+%  fett dargestellte Zeichen im Mathematikmodus, Matrizen, Vektoren
+\newcommand{\mv}[1]{\ensuremath{\boldsymbol{#1}}}
+%  fett dargestellte unterstrichene Zeichen im Mathematikmodus
+\newcommand{\kmv}[1]{\ensuremath{\underline{\boldsymbol{#1}}}}
+%  Transponierte einer Matrix
+\newcommand{\trans}[1]{\ensuremath{\boldsymbol{#1}^{\mathrm{T}}}}
+%  Transponierte der konjugiert komplexen Matrix
+\newcommand{\herm}[1]{\ensuremath{\boldsymbol{#1}^{\mathrm{H}}}}
+%  Rang Matrix
+\newcommand{\rg}[1]{\ensuremath{\mathrm{rg}\left({#1}\right)}}
+%  Spur einer Matrix
+\newcommand{\tr}[1]{\ensuremath{\mathrm{tr}\left\{ #1 \right\}}}
+%  Realteil
+\newcommand{\re}[1]{\mathrm{Re}\left\{  #1 \right\} }
+%  Imaginärteil
+\newcommand{\im}[1]{\mathrm{Im}\left\{  #1 \right\} }
+%  Unterstreichung ... komplex
+\newcommand{\K}[1]{\underline{#1}}
+%  erzeugt das "entspricht Zeichen"
+\newcommand{\corsp}{\ensuremath{\stackrel{\scriptscriptstyle \bigtriangleup}{=}}}
+%  gewöhnliche Ableitung
+\newcommand{\ddx}[1][x]{\frac{\mathrm{d}}{\mathrm{d} #1}}
+%  partielle Ableitung
+\newcommand{\pddx}[1][x]{\frac{\partial}{\partial #1}}
+%  zweifache partielle Ableitung
+\newcommand{\ppddx}[1][x]{\frac{\partial^2}{\partial #1 ^2}}
+%  d-Operator
+\newcommand{\dd}{\mathrm{d}}
+%  Einheitsmatrix							
+\newcommand{\ident}{\mv{I}}	
+%  const. im Mathematikmodus							
+\newcommand{\const}{\mathrm{const.}}			
+%  imaginäre Einheit
+\newcommand{\ii}{j}		
+%  imaginäre Einheit * omega										
+\newcommand{\jw}{\ii \, \omega}						
+% <--------------- End of Mathematisches ----------------------
+
+% --------------- Abkürzungen ------------------------------>
+\newcommand{\zb}{\mbox{z.\,B.}\xspace}		%  Erzeugt z.B. mit korrektem Zwischenraum
+\newcommand{\ua}{\mbox{u.\,a.}\xspace}		%  Erzeugt u.a. mit korrektem Zwischenraum
+\newcommand{\ie}{\mbox{d.\,h.}\xspace}		%  Erzeugt d.h. mit korrektem Zwischenraum
+\newcommand{\og}{\mbox{o.\,g.}\xspace}		%  Erzeugt o.g. mit korrektem Zwischenraum
+\newcommand{\oa}{\mbox{o.\,a.}\xspace}		%  Erzeugt o.a. mit korrektem Zwischenraum
+% <--------------- End of Abkürzungen ----------------------
+
+\lhead{} 
+\chead{} 
+\rhead{} 
+
+\lfoot{} \cfoot{} \rfoot{Seite \thepage\ von \pageref{LastPage}} 
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
+\addto\captionsngerman{\renewcommand{\tablename}{Tab.}}
+%\captionsetup{justification = raggedright}
+
+\begin{document}
+\begin{titlepage}
+	\newgeometry{left=2.5cm, right=2.5cm,top=2cm,bottom=0.1cm}
+
+	%\begin{tikzpicture}[remember picture, overlay]
+	%	\draw[line width = 1pt] ($(current page.north west) + (20mm,-15mm)$) rectangle ($(current page.south east) + (-20mm,15mm)$);
+	%	\draw[line width = 1pt] ($(current page.north west)+ (20mm,-36mm)$) -- ($(current page.north west)+ (190mm,-36mm)$);
+	%\end{tikzpicture}
+
+	\begin{center}
+
+		% Upper part of the page
+		\begin{minipage}[t][2cm]{\textwidth}
+			\begin{minipage}[b][1.5cm]{0.33\textwidth}
+				\includegraphics[height=1.5cm]{assets/images/HZG_Logo_20_RGB}
+			\end{minipage}
+			\begin{minipage}[b][1.5cm][c]{0.55\textwidth}
+				\vspace*{\fill}
+				\centering
+				\textbf{\Large Fakultät Elektrotechnik / Informatik}\\
+				Fachbereich Elektrotechnik
+				\vspace*{\fill}
+			\end{minipage}
+			\begin{minipage}[b][1.5cm]{0.1\textwidth}
+				\includegraphics[height=1.4cm]{assets/images/fakultaetslogo_ohne_text.png}
+			\end{minipage}
+		\end{minipage}
+		%\newline
+
+		\sffamily
+		\vspace{3cm}
+		{\large\textbf{{Belegarbeit zur Lehrveranstaltung \\ Hins und Kunz}}}
+
+		\vspace{3cm}
+		zum Thema \\
+		\vspace{0.5cm}
+		{\Large\textbf{{Thema}}}
+
+		\vspace{5cm}
+		\textbf{Verfasser: } Verfasser \\
+		\textbf{Seminargruppe: } Gruppe \\
+		\textbf{Matrikelnummer: } Mat.-Nummer \\
+		\textbf{Prüfer: } Mensch \\
+
+		\vspace{3cm}
+		\textbf{Abgabedatum: } Datum
+
+	\end{center}
+
+\end{titlepage}
+\newgeometry{left=2.5cm, right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% START DOCUMENT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+	\setstretch{1.0}
+	\tableofcontents
+}
+
+\newpage
+\input{content}
+\end{document}
