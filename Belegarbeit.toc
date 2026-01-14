@@ -1,9 +1,0 @@
-\babel@toc {ngerman}{}\relax 
-\contentsline {section}{\numberline {1}Zielstellung}{2}{section.1}%
-\contentsline {section}{\numberline {2}Einleitung}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Unterabschnitt}{2}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Hauptteil}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Zeug}{3}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Literaturverzeichnis}{4}{section.4}%
-\contentsline {section}{\numberline {A}Anhang}{5}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Messwerte}{5}{subsection.A.1}%
