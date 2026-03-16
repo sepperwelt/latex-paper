@@ -7,3 +7,5 @@
 *.snm
 *.vscode
 *.out
+*(busy)
+*.bbl
