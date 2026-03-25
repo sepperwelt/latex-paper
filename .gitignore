@@ -9,4 +9,10 @@
 *.out
 *(busy)
 *.bbl
+*.bbl-SAVE-ERROR
+*.blg
 *.lco
+*.lot
+*.lof
+*.tdo
+*.synctex.gz

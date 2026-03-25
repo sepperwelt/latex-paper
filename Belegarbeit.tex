@@ -1,57 +1,20 @@
-\documentclass[a4paper,fleqn,12pt]{article}
-\input{preamble.tex}
+\documentclass{HSZG-Beleg}
+
+\SetupTitlePage {
+%	titlelecture = {},
+%	titlepaper = {},
+%	author = {a,b},
+%	studyregister = {},
+% 	studentid = {},
+%	examiner = {},
+%	datefinal = {},
+%	labfem,
+% 	sffont,
+%	bibstyle = {num},
+%	border,
+}
 
 \begin{document}
-\begin{titlepage}
-	\newgeometry{left=2.5cm, right=2.5cm,top=2cm,bottom=0.1cm}
-
-	%\begin{tikzpicture}[remember picture, overlay]
-	%	\draw[line width = 1pt] ($(current page.north west) + (20mm,-15mm)$) rectangle ($(current page.south east) + (-20mm,15mm)$);
-	%	\draw[line width = 1pt] ($(current page.north west)+ (20mm,-36mm)$) -- ($(current page.north west)+ (190mm,-36mm)$);
-	%\end{tikzpicture}
-
-	\begin{center}
-
-		% Upper part of the page
-		\begin{minipage}[t][2cm]{\textwidth}
-			\begin{minipage}[b][1.5cm]{0.33\textwidth}
-				\includesvg[height=1.5cm]{assets/images/HSZG.svg}
-			\end{minipage}
-			\begin{minipage}[b][1.5cm][c]{0.55\textwidth}
-				\vspace*{\fill}
-				\centering
-				\textbf{\Large Fakultät Elektrotechnik / Informatik}\\
-				Fachbereich Elektrotechnik
-				\vspace*{\fill}
-			\end{minipage}
-			\begin{minipage}[b][1.5cm]{0.1\textwidth}
-				\includegraphics[height=1.4cm]{assets/images/fakultaetslogo_ohne_text.png}
-			\end{minipage}
-		\end{minipage}
-		%\newline
-
-		\sffamily
-		\vspace{3cm}
-		{\large\textbf{{Belegarbeit zur Lehrveranstaltung \\ Hinz und Kunz}}}
-
-		\vspace{3cm}
-		zum Thema \\
-		\vspace{0.5cm}
-		{\Large\textbf{{Thema}}}
-
-		\vspace{5cm}
-		\textbf{Verfasser: } Verfasser \\
-		\textbf{Seminargruppe: } Gruppe \\
-		\textbf{Matrikelnummer: } Mat.-Nummer \\
-		\textbf{Prüfer: } Mensch \\
-
-		\vspace{3cm}
-		\textbf{Abgabedatum: } Datum
-
-	\end{center}
-
-\end{titlepage}
-\newgeometry{left=2.5cm, right=2.5cm,top=2.5cm,bottom=2.5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%% START DOCUMENT  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
