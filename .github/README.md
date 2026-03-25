@@ -65,7 +65,9 @@ Die folgenden Befehle stellen gängige Abkürzungen mit korrektem Abstand zur Ve
 ### Tabellen
 Das Package stellt den Zelltyp `C` als zentrierte `X`-Zelle für Tabellen mit `tabularx` und dgl. bereit.
 
-  
+### todonotes  
+Das Package `todonotes` wird geladen. Sollen alle Notizen entfernt werden, kann `disable` als Option direkt der Klasse übergeben werden.
+
 <details>
 <summary>Liste der eingebundenen Pakete</summary>
 
